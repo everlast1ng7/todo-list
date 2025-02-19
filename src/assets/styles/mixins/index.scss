@@ -1,0 +1,47 @@
+@import '../breakpoints/index.scss';
+
+@mixin media-xs {
+  @media all and (max-width: $xs-size) {
+      @content;
+  }
+}
+
+@mixin media-sm {
+  @media all and (max-width: $sm-size) {
+      @content;
+  }
+}
+
+@mixin media-md {
+  @media all and (max-width: $md-size) {
+      @content;
+  }
+}
+
+@mixin media-lg {
+  @media all and (max-width: $lg-size) {
+      @content;
+  }
+}
+
+@mixin media-xl {
+  @media all and (max-width: $xl-size) {
+      @content;
+  }
+}
+
+@mixin media-xxl {
+  @media all and (max-width: $xxl-size) {
+      @content;
+  }
+}
+
+$maxWidth: 2560;
+$maxWidthF: 1920;
+$minWidth: 320;
+
+@mixin adaptive-font($pcSize, $mobSize) {
+  $sizeDiff: $pcSize - $mobSize;
+  $widthDiff: $maxWidthF - $minWidth;
+  font-size: calc(#{$mobSize + px} + #{$sizeDiff} * ((100vw - 320px) / #{$widthDiff}));
+}

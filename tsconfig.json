@@ -1,0 +1,31 @@
+{
+    "references": [
+        {
+            "path": "./tsconfig.node.json"
+        },
+        {
+            "path": "./tsconfig.app.json"
+        }
+    ],
+    "compilerOptions": {
+        "target": "ESNext",
+        "strict": true,
+        "allowSyntheticDefaultImports": true,
+        "module": "ESNext",
+        "composite": true,
+        "noEmit": true,
+        "removeComments": true,
+        "moduleResolution": "Bundler",
+        // "sourceMap": false,
+        "strictNullChecks": true,
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["./src/*"]
+        },
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "resolveJsonModule": true
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules"] 
+}
