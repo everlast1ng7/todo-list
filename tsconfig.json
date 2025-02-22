@@ -13,6 +13,7 @@
         "allowSyntheticDefaultImports": true,
         "module": "ESNext",
         "composite": true,
+        "noImplicitOverride": true,
         "noEmit": true,
         "removeComments": true,
         "moduleResolution": "Bundler",
