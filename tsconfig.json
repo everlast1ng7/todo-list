@@ -15,7 +15,6 @@
         "composite": true,
         "noImplicitOverride": true,
         "noEmit": true,
-        "removeComments": true,
         "moduleResolution": "Bundler",
         // "sourceMap": false,
         "strictNullChecks": true,
