@@ -1,22 +1,18 @@
 {
-  "extends": "@tsconfig/node22/tsconfig.json",
-  "include": [
-    "vite.config.*",
-    "vitest.config.*",
-    "cypress.config.*",
-    "nightwatch.conf.*",
-    "playwright.config.*",
-    "eslint.config.*"
-  ],
-  "compilerOptions": {
-    "types": ["node"],
-    "moduleResolution": "NodeNext",
-    "strict": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "composite": true,
-    "target": "ESNext",
-    "noEmit": true,
-    // "emitDeclarationOnly": true,
-  }
+    "extends": "@tsconfig/node22/tsconfig.json",
+    "compilerOptions": {
+        "moduleResolution": "NodeNext",
+        "composite": true,
+        "types": ["node"],
+        "allowSyntheticDefaultImports": true,
+        "outDir": "./dist",
+        "rootDir": "."
+    },
+    "include": [
+        "vite.config.*",
+        "vitest.config.*",
+        "eslint.config.*",
+        "postcss.config.*",
+        "tailwind.config.*"
+    ]
 }

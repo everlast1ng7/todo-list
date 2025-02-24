@@ -1,6 +1,6 @@
 import MainPage from '@/views/MainPage.vue';
 import { createRouter, createWebHistory } from 'vue-router';
-import { Paths } from './routes.ts';
+import { Paths } from './routes';
 import type { Component } from 'vue';
 
 interface IRoute {

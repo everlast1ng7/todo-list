@@ -1,26 +1,10 @@
 {
-    "extends": "@vue/tsconfig/tsconfig.dom.json",
-    "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "src/vue-router.d.ts"],
-    "exclude": ["src/**/__tests__/*"],
+    "extends": "./tsconfig.json",
     "compilerOptions": {
-        "paths": {
-            "@/*": ["./src/*"]
-        },
-        "types": ["vue", "vue-router"],
-        "esModuleInterop": true,
-        "skipLibCheck": true,
-        "resolveJsonModule": true,
-        "target": "ESNext",
-        "strict": true,
-        "allowSyntheticDefaultImports": true,
-        "module": "ESNext",
         "composite": true,
-        "noImplicitOverride": true,
-        // "emitDeclarationOnly": true,
-        "noEmit": true,
-        "moduleResolution": "Bundler",
-        // "sourceMap": false,
-        "strictNullChecks": true,
-        "baseUrl": ".",
-    }
+        "isolatedModules": true,
+        "lib": ["DOM", "ESNext"]
+    },
+    "include": ["env.d.ts", "src/**/*.vue", "src/**/*.ts", "src/**/*.tsx", "src/**/*.json"],
+    "exclude": ["src/**/__tests__/*", "src/**/__mocks__/*"]
 }
