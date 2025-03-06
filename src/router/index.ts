@@ -1,4 +1,3 @@
-import MainPage from '@/views/MainPage.vue';
 import { createRouter, createWebHistory } from 'vue-router';
 import { Paths } from './routes';
 import type { Component } from 'vue';
@@ -11,7 +10,7 @@ interface IRoute {
 const routes:IRoute[] = [
     {
         path: Paths.root,
-        component: MainPage
+        component: () => import('@/views/MainPage.vue'),
     }
 ];
 

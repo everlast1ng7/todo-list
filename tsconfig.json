@@ -16,7 +16,7 @@
         "paths": {
             "@/*": ["src/*"]
         },
-        "types": ["vue", "vite/client"]
+        "types": ["vue", "vite/client", "vue-router"]
     },
     "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.vue"],
     "exclude": ["node_modules", "dist", "**/*.test.ts"]
