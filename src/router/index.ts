@@ -5,12 +5,14 @@ import type { Component } from 'vue';
 interface IRoute {
     path: string;
     component: Component;
+    name: string
 }
 
 const routes:IRoute[] = [
     {
         path: Paths.root,
         component: () => import('@/views/MainPage.vue'),
+        name: 'MainPage'
     }
 ];
 
