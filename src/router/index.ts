@@ -11,8 +11,8 @@ interface IRoute {
 const routes:IRoute[] = [
     {
         path: Paths.root,
-        component: () => import('@/views/MainPage.vue'),
-        name: 'MainPage'
+        component: () => import('@/views/mainView/MainView.vue'),
+        name: 'MainView'
     }
 ];
 

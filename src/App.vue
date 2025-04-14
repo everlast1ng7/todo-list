@@ -1,6 +1,6 @@
 <script setup lang="ts">
-    // import HeaderBlock from '@/components/HeaderBlock.vue';
-    // import FooterBlock from '@/components/FooterBlock.vue';
+    // import HeaderBlock from '@/components/header/HeaderBlock.vue';
+    // import FooterBlock from '@/components/footer/FooterBlock.vue';
 </script>
 
 <template>
