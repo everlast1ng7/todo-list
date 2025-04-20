@@ -1,7 +1,11 @@
 interface IPaths {
-    root: string
+    root: string;
+    createTaskView: string;
+    changeTaskView: string;
 }
 
-export const Paths:IPaths = {
+export const Paths: IPaths = {
     root: '/',
-}
+    createTaskView: '/createTaskPage',
+    changeTaskView: '/changeTaskPage'
+};

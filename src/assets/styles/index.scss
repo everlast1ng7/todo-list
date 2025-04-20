@@ -4,14 +4,58 @@
 @import './modifiers/index.scss';
 @import './functions/index.scss';
 
+:root {
+    --logo-title-color: #bababa;
+    --background-main: #fff;
+    --background-button-primary: #21a2f5;
+    --background-button-hover-primary: #1b88cd;
+    --background-button-secondary: #f3f5fb;
+    --background-button-hover-secondary: #cfd5e4;
+    --color-button-primary: #fff;
+    --color-button-secondary: #494d60;
+    --checkbox-text-color: #494d60;
+    --input-title-color: #494d60;
+    --input-text-color: #9299b8;
+    --input-border: 1px solid #e3e6ef;
+    --input-background: #fff;
+    --input-color: #494d60;
+    --input-placeholder: #9299b8;
+    --input-border-hover: 1px solid #21a2f5;
+    --input-border-error: 1px solid #ff4d4f;
+    --id-color: #d2d2d2;
+    --id-bug-color: #ffb6b6;
+    --task-name-color: #494d60;
+    --task-name-bug-color: #df2424;
+    --task-border: 1px solid #cdcdcd;
+    --stats-color: #494d60;
+}
+
+.ui-checkbox {
+    --primary-color: #1677ff;
+    --secondary-color: #fff;
+    --primary-hover-color: #4096ff;
+    --checkbox-diameter: 20px;
+    --checkbox-border-radius: 5px;
+    --checkbox-border-color: #d9d9d9;
+    --checkbox-border-width: 1px;
+    --checkbox-border-style: solid;
+    --checkmark-size: 1.2;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    // font-family: $main-font-family;
+    font-family: 'Montserrat', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: var(--background-main);
+    padding: rem(20px);
+    max-width: 396px;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 100dvh;
 }
 
 h1,

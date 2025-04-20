@@ -1,13 +1,8 @@
-<script setup lang="ts">
-    // import HeaderBlock from '@/components/header/HeaderBlock.vue';
-    // import FooterBlock from '@/components/footer/FooterBlock.vue';
-</script>
+<script setup lang="ts"></script>
 
 <template>
     <div class="app">
-        <!-- <header-block></header-block> -->
         <router-view></router-view>
-        <!-- <footer-block></footer-block> -->
     </div>
 </template>
 

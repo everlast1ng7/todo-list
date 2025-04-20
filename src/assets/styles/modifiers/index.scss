@@ -1,10 +1,10 @@
 :root {
-    --width-content-xxl: 1640px;
-    --width-content-xl: 1200px;
-    --width-content-lg: 99%;
-    --width-content-md: 99%;
-    --width-content-sm: 99%;
-    --width-content-xs: 99%;
+    --width-content-xxl: 396px;
+    --width-content-xl: 396px;
+    --width-content-lg: 396px;
+    --width-content-md: 396px;
+    --width-content-sm: 396px;
+    --width-content-xs: 396px;
 }
 
 .section_content_center {
@@ -23,6 +23,9 @@
 .content_wrapper {
     max-width: var(--width-content-xxl);
     width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 @include media-xl {
@@ -55,3 +58,12 @@
     }
 }
 
+.list-enter-active,
+.list-leave-active {
+    transition: all 0.5s ease;
+}
+.list-enter-from,
+.list-leave-to {
+    opacity: 0;
+    transform: translateX(30px);
+}
