@@ -3,7 +3,7 @@
     import VariantButton from '@/components/UI/button/VariantButton.vue';
     import MainInput from '@/components/UI/field/MainInput.vue';
     import MainCheckbox from '@/components/UI/checkbox/MainCheckbox.vue';
-    import { useTasksStore } from '@/components/stores/tasks';
+    import { useTasksStore } from '@/stores/tasks';
     import { Paths } from '@/router/routes';
     import { ref } from 'vue';
     import { useRouter } from 'vue-router';

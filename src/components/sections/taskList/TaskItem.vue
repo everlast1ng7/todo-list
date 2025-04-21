@@ -3,7 +3,7 @@
     import IconChange from '@/components/icons/IconChange.vue';
     import IconDelete from '@/components/icons/IconDelete.vue';
     import { useRouter } from 'vue-router';
-    import { useTasksStore } from '@/components/stores/tasks';
+    import { useTasksStore } from '@/stores/tasks';
 
     const router = useRouter();
 
@@ -20,10 +20,6 @@
             name: 'ChangeTaskView',
             params: {
                 id: props.task.id
-            },
-            query: {
-                title: props.task.title,
-                isBug: props.task.isBug ? '1' : '0'
             }
         });
     }

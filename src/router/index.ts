@@ -8,8 +8,6 @@ interface IRoute {
     name: string;
     props?: (route: RouteLocationNormalized) => {
         id: number;
-        title: string;
-        isBug: boolean;
     };
 }
 
@@ -29,9 +27,7 @@ const routes: IRoute[] = [
         component: () => import('@/views/changeTaskView/ChangeTaskView.vue'),
         name: 'ChangeTaskView',
         props: (route) => ({
-            id: Number(route.params.id),
-            title: String(route.query.title),
-            isBug: Number(route.query.isBug) === 1
+            id: Number(route.params.id)
         })
     }
 ];

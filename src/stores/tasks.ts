@@ -43,17 +43,23 @@ export const useTasksStore = defineStore('tasks', () => {
         });
     }
 
-    function removeTask(id: number): void {
+    function removeTask(id: number): boolean {
         const index: number = tasks.value.findIndex((task: ITasks) => task.id === id);
         if (index !== -1) {
             tasks.value.splice(index, 1);
+            return true 
+        } else {
+            return false
         }
     }
 
-    function updateTask(id: number, updates: Partial<Omit<ITasks, 'id'>>): void {
+    function updateTask(id: number, updates: Partial<Omit<ITasks, 'id'>>): boolean {
         const task: ITasks | undefined = tasks.value.find((tsk: ITasks) => tsk.id === id);
         if (task) {
             Object.assign(task, updates);
+            return true
+        } else {
+            return false
         }
     }
 

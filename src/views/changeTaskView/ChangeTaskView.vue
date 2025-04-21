@@ -4,7 +4,7 @@
     import MainInput from '@/components/UI/field/MainInput.vue';
     import MainCheckbox from '@/components/UI/checkbox/MainCheckbox.vue';
     import IconDelete from '@/components/icons/IconDelete.vue';
-    import { useTasksStore } from '@/components/stores/tasks';
+    import { useTasksStore } from '@/stores/tasks';
     import { Paths } from '@/router/routes';
     import { ref } from 'vue';
     import { useRouter } from 'vue-router';
@@ -15,15 +15,14 @@
 
     interface IProps {
         id: number;
-        title: string;
-        isBug: boolean;
     }
 
     const props = defineProps<IProps>();
 
-    const taskName = ref<string>(props.title);
-    const isBug = ref<boolean>(props.isBug);
     const taskId = ref<number>(props.id);
+    const taskData = tasksStore.getTaskById(taskId.value);
+    const taskName = ref<string>(taskData.value?.title || '');
+    const isBug = ref<boolean>(taskData.value?.isBug || false);
 
     const isInputError = ref<boolean>(false);
 
